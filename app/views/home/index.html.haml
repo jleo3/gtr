@@ -12,9 +12,8 @@
     %tr
     - @accounts.each do |account|
       %td
-        #{account.name}
+        #{link_to account.name, account}
       %td
         #{account.balance}
       %td
         #{account.updated_at}
-      
