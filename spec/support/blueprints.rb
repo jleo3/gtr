@@ -9,5 +9,6 @@ require 'machinist/active_record'
 #   end
 
 User.blueprint do
-  # Attributes here
+  email { "joseph.leo3@gmail.com" }
+  password { "testPassw0rd" }
 end
