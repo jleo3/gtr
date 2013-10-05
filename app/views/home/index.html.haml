@@ -10,6 +10,11 @@
       %td
         Last Updated
     %tr
-    - @users.each do |user|
+    - @accounts.each do |account|
       %td
-        #{link_to user.name, user}
+        #{account.name}
+      %td
+        #{account.balance}
+      %td
+        #{account.updated_at}
+      
