@@ -19,7 +19,6 @@
 db/*.sqlite3
 /log/*
 /tmp/*
-bin/
 
 # various artifacts
 **.war
