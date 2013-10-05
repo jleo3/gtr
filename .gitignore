@@ -19,6 +19,7 @@
 db/*.sqlite3
 /log/*
 /tmp/*
+bin/
 
 # various artifacts
 **.war
@@ -76,3 +77,4 @@ pickle-email-*.html
 
 # Ignore application configuration
 /config/application.yml
+**.un~
