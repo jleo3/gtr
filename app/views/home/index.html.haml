@@ -1,4 +1,15 @@
-%h3 Home
-- @users.each do |user|
-  %p
-    User: #{link_to user.name, user}
+%h3 Welcome to Good Thing We're Rich!
+
+%table.table
+  %body.table-stribed
+    %tr
+      %td
+        Account 
+      %td
+        Balance
+      %td
+        Last Updated
+    %tr
+    - @users.each do |user|
+      %td
+        #{link_to user.name, user}
