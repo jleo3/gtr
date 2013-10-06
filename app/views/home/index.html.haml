@@ -16,4 +16,4 @@
       %td
         #{account.balance}
       %td
-        #{account.updated_at}
+        #{account.updated_at.localtime.strftime("%a %e %b %l:%M %p")}
