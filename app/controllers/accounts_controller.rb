@@ -4,5 +4,9 @@ class AccountsController < ApplicationController
   end
 
   def update
+    @update = "Yay! Updated!"
+    respond_to do |format|
+      format.js {}
+    end
   end
 end

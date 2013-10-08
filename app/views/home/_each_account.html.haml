@@ -1,0 +1,10 @@
+- @accounts.each do |account|
+  %tr
+    %td
+      #{link_to account.name, account}
+    %td
+      #{account.balance}
+    %td
+      #{account.updated_at.localtime.strftime("%a %e %b %l:%M %p")}
+    %td
+      = button_to "Update", account_path(account.id), :method => :patch, remote: true
