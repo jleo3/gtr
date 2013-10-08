@@ -1,7 +1,7 @@
 %h3 Welcome to "Good Thing We're Rich!"
 
 %table.table
-  %body.table-stribed
+  %body.table-striped
     %tr
       %td
         Account 
@@ -9,6 +9,7 @@
         Balance
       %td
         Last Updated
+      %td
     %tr
     - @accounts.each do |account|
       %td
@@ -17,3 +18,5 @@
         #{account.balance}
       %td
         #{account.updated_at.localtime.strftime("%a %e %b %l:%M %p")}
+      %td
+        = button_to "Update", account_path(account.id), :method => :patch
