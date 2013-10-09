@@ -1,0 +1,98 @@
+- show website (accounts, user login/logout/edit, etc...)
+
+- we're going to add transactions
+
+- start with a feature spec (OUTSIDE IN TESTING): transactions_feature_spec.rb
+
+require 'spec_helper'
+
+describe "when the user visits the index page" do
+  it "will see all transactions" do
+
+  end
+end
+
+
+- We're going to start with the assertion, the "should" or "expect"
+
+- expect(page).to have_content @transaction
+  - sneaky because @transaction evaluates to nil
+  - but I'm not happy with the error message. the test doesn't fail for the right reason (SLIDE)
+  - Let's add "visit '/transactions'"
+
+- Now the test fails appropriately and it tells me where to go next
+
+- add `resources :transactions` to config/routes. run tests
+
+- now there's no controller. Let's make one, starting with the spec
+
+- transactions_controller_spec.rb: 
+require 'spec_helper'
+
+describe TransactionsController do
+end
+
+- Something interesting happens here. Even with no specs, this describe block fails. Because a controller spec is looking for a controller to set its rspec methods on: response are set up with the Describe statement. So we already have a failure and we can move onto the controller.
+
+- build the TransactionsController empty
+
+  describe "GET 'index'" do  # notice we're not using user-friendly syntax anymore
+    it "should be successful" do
+
+      response.should be_success
+    end
+  end
+
+- add `get :index`, run test, fix with index method
+
+- now we have a template error. add app/views/transactions/index.html.ham,
+
+- now we have a passing test. And it's nice, but it doesn't solve any real problem. 
+   add to controller_spec:   assigns(:transactions).should_not be_nil
+
+- assigns puts the onus on the controller to come up with transactions, NOT the view. SEPERATION OF CONCERNS APPLIES TO TESTING, TOO
+
+- change to assigns(:transactions).first.should be_an_instance_of Transaction 
+
+- in order for that to work we need to create a Transaction
+
+- run the spec. Now we need to build a Transaction
+
+joe@warpaint:~/dev/gtr$ rails g model Transaction name:string amount:float
+invoke  active_record
+create    db/migrate/20131007233648_create_transactions.rb
+create    app/models/transaction.rb
+invoke    rspec
+create      spec/models/transaction_spec.rb
+invoke      machinist
+append        spec/support/blueprints.rb
+
+- rake db:migrate; rake db:test:prepare
+
+- run spec. now our string for @transactions doesn't hold up
+  - Transaction.create! name: "Yacht", amount: 100.0
+
+- edit TransactionsController. Now the transaction test passes
+
+- let's go back to our feature spec. This only passes because @transaction is nil. So let's make our test better
+    transaction_1 = Transaction.make! name: "ATM Withdrawal"
+    transaction_2 = Transaction.make! name: "Lunch"
+
+    expect(page).to have_content transaction_1.name
+    expect(page).to have_content transaction_2.name
+
+- now we have something in the view worth testing
+
+- let's make sure when we create Transactions, they have a name and an amount
+
+- spec/models/transactions_spec.rb
+  it { should validate_presence_of :name }
+ uses rspec-shoulda, which is helpful for ActiveModel::Validations
+
+- Let's run rake spec to see where we are in the ecosystem. Should be just one failure
+
+- Now let's get our form in order: https://gist.github.com/6877477. 
+cp from ~/index.html.haml
+
+- run our tests, everything passes
+
