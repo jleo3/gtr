@@ -1,1 +1,1 @@
-$(".users").replaceWith("<%= escape_javascript("YAY!") %>");
+$(".users").replaceWith("<%= escape_javascript(render(:partial => 'shared/each_account')) %>");
