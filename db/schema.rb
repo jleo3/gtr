@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131010130204) do
+ActiveRecord::Schema.define(version: 20131010131512) do
 
   create_table "accounts", force: true do |t|
     t.string   "name"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20131010130204) do
   end
 
   create_table "credits", force: true do |t|
-    t.string   "name"
+    t.string   "creditor"
     t.float    "amount"
     t.datetime "purchase_date"
     t.datetime "processed_date"
