@@ -25,6 +25,7 @@ group :development do
 end
 group :development, :test do
   gem 'rspec-rails'
+  gem 'shoulda-matchers'
 end
 group :production do
   gem 'unicorn'

@@ -1,0 +1,19 @@
+%h3 Listing All Credits
+
+%table.table
+  %body.table-striped
+    %tr
+      %td
+        Creditor 
+      %td
+        Amount
+      %td
+        Purchase Date
+    %tr
+    - @credits.each do |credit|
+      %td
+        #{credit.creditor}
+      %td
+        #{credit.amount}
+      %td
+        #{credit.purchase_date.strftime("%a %e %b %l:%M %p")}
