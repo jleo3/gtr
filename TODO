@@ -1,0 +1,7 @@
+use foreman for rails c, s
+use Faker in blueprint
+format date, amount of credit
+format amount of account
+validations for account
+link to all credits
+format row in credits index
