@@ -21,8 +21,14 @@ ActiveRecord::Schema.define(version: 20131010131512) do
     t.datetime "updated_at"
   end
 
-# Could not dump table "credits" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
+  create_table "credits", force: true do |t|
+    t.string   "creditor"
+    t.float    "amount"
+    t.datetime "purchase_date"
+    t.datetime "processed_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
