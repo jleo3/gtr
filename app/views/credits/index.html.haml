@@ -1,2 +1,11 @@
+%h3 Listing All Credits
 
-
+%table.table
+  %body.table-striped
+    %tr
+      %td
+        Creditor 
+    %tr
+    - @credits.each do |credit|
+      %td
+        #{credit.creditor}

@@ -13,3 +13,6 @@ puts 'user: ' << user.name
 user.confirm!
 
 Account.create! name: "Checking", balance: 1000.0
+
+date = DateTime.parse("October 7th, 2013")
+Credit.create! creditor: "Gregory's", amount: 2.40, purchase_date: date, processed_date: date
