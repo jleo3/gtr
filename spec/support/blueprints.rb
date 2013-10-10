@@ -9,5 +9,7 @@ Account.blueprint do
 end
 
 Credit.blueprint do
-  # Attributes here
+  creditor { "any name" }
+  amount { 100.0 }
+  purchase_date { DateTime.yesterday }
 end

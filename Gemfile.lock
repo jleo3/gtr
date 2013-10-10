@@ -155,6 +155,8 @@ GEM
       sass (>= 3.1.10)
       sprockets-rails (~> 2.0.0)
     sexp_processor (4.3.0)
+    shoulda-matchers (2.4.0)
+      activesupport (>= 3.0.0)
     simple_form (3.0.0)
       actionpack (>= 4.0.0, < 4.1)
       activemodel (>= 4.0.0, < 4.1)
@@ -227,6 +229,7 @@ DEPENDENCIES
   rails (= 4.0.0)
   rspec-rails
   sass-rails (~> 4.0.0)
+  shoulda-matchers
   simple_form (>= 3.0.0.rc)
   simplecov
   sqlite3
