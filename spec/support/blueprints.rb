@@ -7,3 +7,7 @@ end
 
 Account.blueprint do
 end
+
+Credit.blueprint do
+  # Attributes here
+end
