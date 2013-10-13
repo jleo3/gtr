@@ -1,7 +1,7 @@
 require 'machinist/active_record'
 
 User.blueprint do
-  email { "joseph.leo3@gmail.com" }
+  email { Faker::Internet.email }
   password { "testPassw0rd" }
 end
 
@@ -9,7 +9,7 @@ Account.blueprint do
 end
 
 Credit.blueprint do
-  creditor { "any name" }
-  amount { 100.0 }
+  creditor { Faker::Name.name }
+  amount { (rand * 100).round(2) }
   purchase_date { DateTime.yesterday }
 end
