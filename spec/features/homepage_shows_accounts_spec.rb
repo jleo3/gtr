@@ -19,7 +19,6 @@ describe "when I hit the homepage", :type => :feature do
   end
 
   it "can navigate to credits index" do
-
     click_link "Credits"
 
     page.should have_content "Creditor"

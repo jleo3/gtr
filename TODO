@@ -1,9 +1,8 @@
 use foreman for rails c, s
 use wwtd gem
-format date, amount of credit
-format amount of account
+date format of account, credit
+format currency of account, credit
 validations for account
-format row in credits index
 credit belongs_to (only one) account
 account has_many credits
 debits
