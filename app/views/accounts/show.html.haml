@@ -3,16 +3,6 @@
   Name: #{@account.name}
 %p
   Balance: #{@account.balance}
-%table.table
-  %body.table-striped
-    %tr
-      %td
-        Credits:
-    - @account.credits.each do |credit|
-      %tr
-        %td
-          #{credit.creditor}
-        %td
-          #{credit.amount}
-        %td
-          #{credit.purchase_date.strftime("%a %e %b %l:%M %p")}
+%p
+  Credits:
+= render partial: 'shared/each_credit', locals: { credits: @account.credits }
