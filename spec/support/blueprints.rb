@@ -15,3 +15,6 @@ Credit.blueprint do
   amount { (rand * 100).round(2) }
   purchase_date { DateTime.yesterday }
 end
+
+Debit.blueprint do
+end
