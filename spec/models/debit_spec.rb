@@ -14,7 +14,9 @@ describe Debit do
 
   describe ".create" do
     it "can create a Debit" do
-      Debit.create!
+      Debit.create! debtor: "Credit Suisse",
+                    amount: 3500.00,
+                    debit_date: DateTime.parse("October 7th, 2013")
     end
   end
 
