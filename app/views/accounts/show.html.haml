@@ -3,3 +3,6 @@
   Name: #{@account.name}
 %p
   Balance: #{@account.balance}
+%p
+  Credits:
+= render partial: 'shared/each_credit', locals: { credits: @account.credits }

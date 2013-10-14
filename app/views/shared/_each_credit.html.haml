@@ -1,0 +1,21 @@
+%table.table
+  %body.table-striped
+    %tr
+      %td
+        Creditor 
+      %td
+        Amount
+      %td
+        Purchase Date
+      %td
+        Account Name
+    - credits.each do |credit|
+      %tr
+        %td
+          #{credit.creditor}
+        %td
+          #{credit.amount}
+        %td
+          #{credit.purchase_date.strftime("%a %e %b %l:%M %p")}
+        %td
+          #{credit.account.name}

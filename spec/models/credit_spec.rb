@@ -8,6 +8,10 @@ describe Credit do
     it { should validate_presence_of :purchase_date }
   end
 
+  describe "relations" do
+    it { should belong_to :account }
+  end
+
   describe ".create" do
     it "can create a Credit" do
       Credit.create! creditor: "Gregory's", 
