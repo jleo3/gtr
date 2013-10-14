@@ -2,6 +2,5 @@ use foreman for rails c, s
 use wwtd gem
 date format of account, credit
 format currency of account, credit
-credit belongs_to (only one) account
-account has_many credits
+credits index shows account
 debits
