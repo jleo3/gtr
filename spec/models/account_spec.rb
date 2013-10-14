@@ -10,6 +10,7 @@ describe Account do
 
   describe "relations" do
     it { should have_many :credits }
+    it { should have_many :debits }
   end
 
   it "should create a new instance" do
