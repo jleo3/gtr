@@ -7,6 +7,8 @@
         Amount
       %td
         Purchase Date
+      %td
+        Account Name
     - credits.each do |credit|
       %tr
         %td
@@ -15,3 +17,5 @@
           #{credit.amount}
         %td
           #{credit.purchase_date.strftime("%a %e %b %l:%M %p")}
+        %td
+          #{credit.account.name}
