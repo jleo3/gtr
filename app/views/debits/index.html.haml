@@ -1,2 +1,25 @@
+%h3 Listing All Debits
+
+%table.table
+  %body.table-striped
+    %tr
+      %td
+        Debtor 
+      %td
+        Amount
+      %td
+        Debit Date
+      %td
+        Account Name
+    - @debits.each do |debit|
+      %tr
+        %td
+          #{debit.debtor}
+        %td
+          #{debit.amount}
+        %td
+          #{debit.debit_date.strftime("%a %e %b %l:%M %p")}
+        %td
+          #{debit.account.name}
 
 
