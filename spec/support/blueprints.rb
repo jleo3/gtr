@@ -6,6 +6,8 @@ User.blueprint do
 end
 
 Account.blueprint do
+  name { Faker::Name.name }
+  balance { (rand * 1000).round(2) }
 end
 
 Credit.blueprint do
