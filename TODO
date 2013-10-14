@@ -1,7 +1,9 @@
 use foreman for rails c, s
-use Faker in blueprint
+use wwtd gem
 format date, amount of credit
 format amount of account
 validations for account
-link to all credits
 format row in credits index
+credit belongs_to (only one) account
+account has_many credits
+debits
