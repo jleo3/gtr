@@ -19,4 +19,5 @@ credit = Credit.create! creditor: "Gregory's", amount: 2.40, purchase_date: date
 debit = Debit.create! debtor: "Credit Suisse", amount: 3500.00, debit_date: date, processed_date: date
 
 account.credits << credit
+account.debits << debit
 account.save!
