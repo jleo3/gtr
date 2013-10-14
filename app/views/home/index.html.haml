@@ -9,11 +9,11 @@
         Balance
       %td
         Last Updated
-    %tr
     - @accounts.each do |account|
-      %td
-        #{link_to account.name, account}
-      %td
-        #{account.balance}
-      %td
-        #{account.updated_at.localtime.strftime("%a %e %b %l:%M %p")}
+      %tr
+        %td
+          #{link_to account.name, account}
+        %td
+          #{account.balance}
+        %td
+          #{account.updated_at.localtime.strftime("%a %e %b %l:%M %p")}
