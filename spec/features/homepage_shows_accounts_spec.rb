@@ -23,4 +23,10 @@ describe "when I hit the homepage", :type => :feature do
 
     page.should have_content "Creditor"
   end
+
+  it "can navigate to debits index" do
+    click_link "Debits"
+
+    page.should have_content "Debtor"
+  end
 end
