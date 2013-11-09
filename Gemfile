@@ -26,6 +26,7 @@ end
 group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
+  gem 'dotenv-rails'
 end
 group :production do
   gem 'unicorn'

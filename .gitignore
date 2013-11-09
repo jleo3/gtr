@@ -80,3 +80,6 @@ pickle-email-*.html
 # Ignore vim droppings, tags
 **.un~
 tags
+
+# Ignore .env
+.env
