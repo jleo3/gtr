@@ -1,3 +1,10 @@
 %h3 Listing All Credits
 
 = render partial: 'shared/each_credit', locals: { credits: @credits }
+
+= simple_form_for @credit do |f|
+  = f.input :creditor
+  = f.input :amount
+  = f.input :purchase_date, :as => :string, :input_html => { data: {behaviour: "datepicker"}}
+  = f.button :submit
+
