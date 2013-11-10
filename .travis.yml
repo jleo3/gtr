@@ -9,3 +9,7 @@ deploy:
   app: goodthing
   on:
     repo: jleo3/gtr
+
+notifications:
+  email:
+    on_success: always
