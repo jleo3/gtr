@@ -245,7 +245,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 4.0.0)
   shoulda-matchers
-  simple_form (>= 3.0.0.rc)
+  simple_form
   simplecov
   sqlite3
   therubyracer

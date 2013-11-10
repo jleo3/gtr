@@ -13,7 +13,7 @@ gem 'devise'
 gem 'figaro'
 gem 'haml-rails'
 gem 'less-rails'
-gem 'simple_form', '>= 3.0.0.rc'
+gem 'simple_form'
 gem 'therubyracer', :platform=>:ruby
 gem 'twitter-bootstrap-rails'
 
