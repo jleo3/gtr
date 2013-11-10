@@ -16,6 +16,7 @@ gem 'less-rails'
 gem 'simple_form'
 gem 'therubyracer', :platform=>:ruby
 gem 'twitter-bootstrap-rails'
+gem 'bootstrap-datepicker-rails'
 
 group :development do
   gem 'better_errors'

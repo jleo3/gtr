@@ -21,7 +21,7 @@ describe "when I visit the credits index page" do
 
     fill_in "Creditor", with: "Gregory's"
     fill_in "Amount", with: "2.65"
-    fill_in "Purchase Date", with: DateTime.parse("November 2nd, 2013")
+    fill_in "Purchase date", with: DateTime.parse("November 2nd, 2013")
 
     page.should have_content "Credits"
   end
