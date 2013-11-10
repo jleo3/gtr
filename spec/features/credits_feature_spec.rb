@@ -22,7 +22,10 @@ describe "when I visit the credits index page" do
     fill_in "Creditor", with: "Gregory's"
     fill_in "Amount", with: "2.65"
     fill_in "Purchase date", with: DateTime.parse("November 2nd, 2013")
+    fill_in "Account name", with: "Checking"
 
     page.should have_content "Credits"
   end
+
+  pending "should show defaults for date, account name"
 end
