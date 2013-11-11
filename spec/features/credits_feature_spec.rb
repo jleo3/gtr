@@ -5,19 +5,10 @@ describe "when I visit the credits index page" do
     @account = Account.make!
   end
 
-  it "will show me all of the credits" do
-    @credit = Credit.make! creditor: "Gregory's",
-                           amount: 2.40,
-                           purchase_date: DateTime.parse("October 7th, 2013"),
-                           account: @account
-                           
-
+  it "will show me the credits index page" do
     visit '/credits'
 
-    page.should have_content @credit.creditor
-    page.should have_content @credit.amount
-    page.should have_content @credit.purchase_date.strftime("%a %e %b %l:%M %p")
-    page.should have_content @credit.account.name
+    page.should have_content "All Credits"
   end
 
   it "will let me add credits" do
