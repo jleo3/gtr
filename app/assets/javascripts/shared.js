@@ -47,7 +47,7 @@ $(document).ready(function() {
       
       if (self._formatter) self._formatter(data);
 
-      callback({ data: data, start: 0, end: 0, count: 0, pages: 0, page: 0 });
+      callback({ data: data, start: start, end: end, count: count, pages: pages, page: page });
     }
   };
 
