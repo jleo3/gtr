@@ -1,6 +1,7 @@
 class CreditsController < ApplicationController
   def index
     @credits = Credit.all
+    gon.credits = @credits
     @credit = Credit.new
   end
 
