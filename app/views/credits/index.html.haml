@@ -6,6 +6,6 @@
   = f.input :creditor
   = f.input :amount
   = f.input :purchase_date, :as => :string, :input_html => { data: {behaviour: "datepicker"}}
-  = f.input :account_id, label: "Account name"
+  = f.input :account_id, label: "Account name", collection: Account.all
   = f.button :submit
 

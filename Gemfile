@@ -45,4 +45,5 @@ group :test do
   gem 'email_spec'
   gem 'machinist'
   gem 'faker'
+  gem 'validates_existence'
 end
