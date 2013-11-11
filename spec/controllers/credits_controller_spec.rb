@@ -26,14 +26,22 @@ describe CreditsController do
 
   describe "POST 'create'" do
     it "will create successfully" do
-
       post :create, credit: @valid_fields
 
       response.should redirect_to(credits_path)
       Credit.all.size.should eq(1)
       Credit.first.account.name.should eq("Checking")
+      flash[:notice].should be_nil
     end
 
-    pending "will require params"
+    it "will fail with missing param" do
+      missing_creditor = @valid_fields
+      missing_creditor[:creditor] = ""
+      post :create, credit: missing_creditor
+
+      response.should redirect_to(credits_path)
+      Credit.all.size.should eq(0)
+      flash[:notice].should_not be_nil
+    end
   end
 end

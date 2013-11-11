@@ -17,7 +17,6 @@ describe Credit do
     it { should validate_presence_of :creditor }
     it { should validate_presence_of :amount }
     it { should validate_presence_of :purchase_date }
-    it { should validate_presence_of :account_id }
 
     describe "account_id" do
       it "will match an existing account" do
