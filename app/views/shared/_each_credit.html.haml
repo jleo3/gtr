@@ -1,21 +1,41 @@
-%table.table
-  %body.table-striped
-    %tr
-      %td
-        Creditor 
-      %td
-        Amount
-      %td
-        Purchase Date
-      %td
-        Account Name
-    - credits.each do |credit|
+= javascript_include_tag "shared"
+
+.container-fluid
+  %table#MyGrid.table.table-bordered.datagrid
+    %thead
       %tr
-        %td
-          #{credit.creditor}
-        %td
-          #{credit.amount}
-        %td
-          #{credit.purchase_date.strftime("%a %e %b %l:%M %p")}
-        %td
-          #{credit.account.name}
+        %th
+          %span.datagrid-header-title All Credits
+          .datagrid-header-left
+          .datagrid-header-right
+            .input-append.search
+              %input.input-medium{placeholder: "Search", type: "text"}/
+              %button.btn
+                %i.icon-search
+      %tfoot
+        %tr
+          %th
+            .datagrid-footer-left{style: "display:none;"}
+              .grid-controls
+                %span
+                  %span.grid-start
+                  \-
+                  %span.grid-end
+                  of
+                  %span.grid-count
+                %select.grid-pagesize
+                  %option 5
+                  %option 10
+                %span Per Page
+            .datagrid-footer-right{style: "display:none;"}
+              .grid-pager
+                %button.btn.grid-prevpage
+                  %i.icon-chevron-left
+                %span Page
+                .input-append.dropdown.combobox
+                  %input.span1{type: "text"}/
+                %span
+                  of
+                  %span.grid-pages
+                %button.btn.grid-nextpage
+                  %i.icon-chevron-right
