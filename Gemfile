@@ -33,6 +33,8 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'dotenv-rails'
   gem 'sqlite3'
+  gem 'jasmine'
+  gem 'jasmine-rails'
 end
 
 group :production do
