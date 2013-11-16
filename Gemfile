@@ -33,6 +33,8 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'dotenv-rails'
   gem 'sqlite3'
+  gem "jasminerice", :git => 'https://github.com/bradphelan/jasminerice.git'
+  gem 'guard-jasmine'
 end
 
 group :production do
