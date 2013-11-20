@@ -6,6 +6,7 @@ script: rake travis
 
 deploy:
   provider: heroku
+  strategy: git
   api_key:
     secure: ZhopNkxXSY9U6emx9M64zm9o1OrCQTXscHxhtG+IIHkucQFnf/RzGkTPtBiuOj46kVNXQ4UiYM2qnPYdzH+ufjk764fFHOcVc0VaoNzZkgFdGaLk5dwhvwoaZ1zhARDGCYpgs5TwQCPHST1MPxVyLo4lYQAlkHixlKGwJfisIoQ=
   app: goodthing
