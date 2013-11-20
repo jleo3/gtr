@@ -7,7 +7,7 @@ require "guard/jasmine/task"
 Gtr::Application.load_tasks
 Guard::JasmineTask.new
 
-task :travis do
+task :travis => ["db:migrate", "db:test:prepare"] do
   ["rspec spec", "rake guard:jasmine"].each do |cmd|
     puts "Starting to run #{cmd}..."
     system("export DISPLAY=:99.0 && #{cmd}")
