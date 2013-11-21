@@ -1,4 +1,5 @@
-Gtr
+GTR
 ========================
 
 {<img src="https://travis-ci.org/jleo3/popularity.png" />}[https://travis-ci.org/jleo3/popularity]
+{<img src="https://codeclimate.com/github/jleo3/gtr.png" />}[https://codeclimate.com/github/jleo3/gtr]
