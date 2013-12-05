@@ -16,6 +16,7 @@ Credit.blueprint do
   creditor { Faker::Name.name }
   amount { RANDOM_SMALL_AMOUNT }
   purchase_date { DateTime.yesterday }
+  account { Account.make }
 end
 
 Debit.blueprint do

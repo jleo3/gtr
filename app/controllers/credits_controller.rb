@@ -1,7 +1,7 @@
 class CreditsController < ApplicationController
   def index
     @credits = Credit.all
-    gon.jbuilder template: "app/views/credits/all_credits.json.jbuilder"
+    gon.jbuilder template: "app/views/credits/_all_credits.json.jbuilder"
     @credit = Credit.new
   end
 
