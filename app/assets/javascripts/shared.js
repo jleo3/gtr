@@ -52,9 +52,14 @@ $(document).ready(function() {
   };
 
   var dataSource = new StaticDataSource({
-    columns: [{property:"creditor",label:"Creditor",sortable:true},{property:"amount",label:"Amount",sortable:true},{property:"purchase_date",label:"Date",sortable:true}],
-      data: gon.credits,
-      delay: 250
+    columns: [
+      {property:"creditor",label:"Creditor",sortable:true},
+      {property:"amount",label:"Amount",sortable:true},
+      {property:"purchase_date",label:"Date",sortable:true},
+      {property:"account",label:"Account",sortable:true}
+    ],
+    data: gon.credits,
+    delay: 250
   });
 
   $('#MyGrid').datagrid({
