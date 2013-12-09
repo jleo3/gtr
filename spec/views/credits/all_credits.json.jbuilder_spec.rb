@@ -32,4 +32,15 @@ describe "credits rendering" do
     expect(rendered_json["credits"].first["purchase_date"]).to eq(@credits.first.purchase_date.strftime("%a %e %b"))
   end
 
+  it "will render account" do
+    Credit.make!
+    @credits = Credit.all
+
+    render "credits/all_credits"
+    rendered_json = JSON.parse(rendered)
+
+    expect(rendered_json["credits"].first["account"]).to eq(@credits.first.account.name)
+  end
+
+
 end
