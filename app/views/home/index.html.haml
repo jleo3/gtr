@@ -17,3 +17,4 @@
           #{account.balance}
         %td
           #{account.updated_at.localtime.strftime("%a %e %b %l:%M %p")}
+    %tr #{link_to "Add an Account", new_account_path}

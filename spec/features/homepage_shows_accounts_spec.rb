@@ -11,6 +11,12 @@ describe "when I hit the homepage", :type => :feature do
     page.should have_content "1000"
   end
 
+  it "links to create account page" do
+    click_link "Add an Account"
+
+    page.should have_content "Create a new account"
+  end
+
   it "links to account show page" do
     click_link @account.name
 
